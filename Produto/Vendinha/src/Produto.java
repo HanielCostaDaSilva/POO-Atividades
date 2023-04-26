@@ -4,7 +4,7 @@ public class Produto {
     private double preco;
     
     public Produto( String nome, int estoque, double preco){
-        assert estoque>=0.0 && preco>=0.0;
+        if (estoque< 0.0 && preco< 0.0) raise Exception('Valores de preço ou estoque inválido.');
         this.nome=nome;
         this.estoque=estoque;
         this.preco=preco;       
@@ -23,14 +23,14 @@ public class Produto {
         return estoque;
     }
     public void setEstoque(int estoque) {
-        assert estoque>=0;
+        if (estoque<0)  raise Exception('Valor inserido de estoque inválido.');
         this.estoque = estoque;
     }
     public double getPreco() {
         return preco;
     }
     public void setPreco(double preco) {
-        assert preco>=0.0;
+        if (preco < 0.0) raise Exception('Valor inserido de estoque inválido.');
         this.preco = preco;
     }
     public String toString(){
