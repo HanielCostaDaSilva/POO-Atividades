@@ -15,7 +15,7 @@ public class Gato extends Animal{
     
     public String toString(){
 
-        return "Nome: " +this.nome+"\nPeso "+ peso+ "\nSalto"+ "\nSom: "+this.emitirSom();
+        return "Nome: " +this.nome+"\nPeso "+ this.getPeso()+ "\nSalto"+ "\nSom: "+this.emitirSom();
     }
     
 }
